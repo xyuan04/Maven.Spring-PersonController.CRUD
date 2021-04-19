@@ -1,4 +1,4 @@
-package model;
+package io.zipcoder.crudapp.model;
 
 import javax.persistence.*;
 import java.util.Objects;

@@ -1,9 +1,9 @@
-package service;
+package io.zipcoder.crudapp.service;
 
-import model.Person;
+import io.zipcoder.crudapp.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.PersonRepository;
+import io.zipcoder.crudapp.repository.PersonRepository;
 
 import java.util.ArrayList;
 import java.util.List;

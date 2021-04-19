@@ -1,6 +1,6 @@
 # CRUDApplication
 
-This repository provides a starter project for a CRUD application using Spring Boot, RestControllers, and H2 for an in memory database. When using the H2 console in the browser (eg: `localhost:8080/console`) be sure to set the `JDBC URL` to match the url defined in `application-h2.properties`. The default is `jdbc:h2:mem:testdb`.
+This io.zipcoder.crudapp.repository provides a starter project for a CRUD application using Spring Boot, RestControllers, and H2 for an in memory database. When using the H2 console in the browser (eg: `localhost:8080/console`) be sure to set the `JDBC URL` to match the url defined in `application-h2.properties`. The default is `jdbc:h2:mem:testdb`.
 
 ## Exercise
 
@@ -19,11 +19,11 @@ Add the `@RestController` annotation to your `PersonController` class, and using
 
 ### Part 2: 
 
-Add the `@Entity` and `@Id` annotations to your Person class as shown in the Reference section. These tell Spring how to convert your Person objects to database entities when you pass them to a repository.
+Add the `@Entity` and `@Id` annotations to your Person class as shown in the Reference section. These tell Spring how to convert your Person objects to database entities when you pass them to a io.zipcoder.crudapp.repository.
 
 Create a `PersonRepository` interface that extends the `CrudRepository` interface. Be sure to specify the `Person` type parameter on `CrudRepository<>`. You will not need to implement this interface as Spring automatically generates an implementation at runtime.
 
-Update your controller logic to use the `PersonRepository` instead of manually tracking Person objects in a list. You will need a `PersonRepository` field marked with the `@Autowired` annotation -- again, Spring will provide an implementation here automatically. You will need to use the `findAll()`, `findOne(id)`, `save(Person)` and `delete(id)` methods of `PersonRepository` to fetch and save Person objects.
+Update your io.zipcoder.crudapp.controller logic to use the `PersonRepository` instead of manually tracking Person objects in a list. You will need a `PersonRepository` field marked with the `@Autowired` annotation -- again, Spring will provide an implementation here automatically. You will need to use the `findAll()`, `findOne(id)`, `save(Person)` and `delete(id)` methods of `PersonRepository` to fetch and save Person objects.
 
 ### Part 3:
 

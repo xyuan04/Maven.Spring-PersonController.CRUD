@@ -1,17 +1,18 @@
-package controller;
+package io.zipcoder.crudapp.controller;
 
-import model.Person;
+import io.zipcoder.crudapp.model.Person;
+import io.zipcoder.crudapp.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.PersonService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/people")
 public class PersonController {
+
     private PersonService personService;
 
     @Autowired

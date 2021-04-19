@@ -1,6 +1,6 @@
 package io.zipcoder.crudapp.controller;
 
-import model.Person;
+import io.zipcoder.crudapp.model.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.BDDMockito;
@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import repository.PersonRepository;
+import io.zipcoder.crudapp.repository.PersonRepository;
 
 import java.util.Optional;
 
