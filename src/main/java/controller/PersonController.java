@@ -10,7 +10,7 @@ import service.PersonService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/console/")
+@RequestMapping("/people")
 public class PersonController {
     private PersonService personService;
 
@@ -19,17 +19,17 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @PostMapping("people")
+    @PostMapping()
     public ResponseEntity<Person> createPerson(@RequestBody Person person) {
         return new ResponseEntity<>(personService.createPerson(person), HttpStatus.CREATED);
     }
 
-    @GetMapping("people")
+    @GetMapping()
     public ResponseEntity<List<Person>> getPersonList() {
         return new ResponseEntity<>(personService.getPersonList(), HttpStatus.OK);
     }
 
-    @GetMapping("people/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Person> getPerson(@PathVariable Long id) {
         Person person = personService.getPerson(id);
 
@@ -38,12 +38,12 @@ public class PersonController {
         } else return new ResponseEntity<>(person, HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping("people/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Person> updatePerson(@PathVariable Long id, @RequestBody Person person) {
         return new ResponseEntity<>(personService.updatePerson(id, person), HttpStatus.OK);
     }
 
-    @DeleteMapping("people/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Boolean> deletePerson(@PathVariable Long id) {
         return new ResponseEntity<>(personService.deletePerson(id), HttpStatus.NO_CONTENT);
     }
